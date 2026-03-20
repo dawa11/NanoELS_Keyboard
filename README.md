@@ -76,13 +76,19 @@ To connect the keyboard to the NanoELS controller, use the following pinout:
 
 ---
 
-## 5. Planned Improvements (Roadmap)
+## 5. Flashing the Controller
+
+Download the Firmware **NanoELS-Keyboard.ino** from the Folder Source/NanoELS-Keyboard and FLash it to you Microcontroller with ArduinoIDE. After the flashing is completed you can open the Serial Monitor and look if the Arduino register every keypress.
+
+---
+
+## 6. Planned Improvements (Roadmap)
 
 * **Handwheels:** Addition of mounting points for two incremental rotary encoders (handwheels) on the sides of the switchplate for precise X and Z axis control.
 
 ---
 
-## 6. Known Bugs & Limitations
+## 7. Known Bugs & Limitations
 
 * **Unimplemented Keys:** The button corresponding to `Angle/RPM/Wifi` are currently non-functional.
 * **STEP Buttons:** The `STEP +` and `STEP -` buttons currently perform the exact same function.
