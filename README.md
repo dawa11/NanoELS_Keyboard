@@ -18,10 +18,10 @@ This keyboard combines all the essential keys documented for the H5 onto a simpl
 To complete this build, you will need the following components and tools:
 
 ### Components
-* **1x Microcontroller** Must have at least **15 GPIO pins** and be **5V tolerant**.
-    * *Recommended* Arduino Micro or a compatible clone.
-* **42x Mechanical Keyboard Switches** Cherry MX style or clones.
-* **Wiring/Cabling** Thin hook-up wire.
+* **1x Microcontroller:** Must have at least **15 GPIO pins** and be **5V tolerant**.
+    * *Recommended:* Arduino Micro or a compatible clone.
+* **42x Mechanical Keyboard Switches:** Cherry MX style or clones.
+* **Wiring/Cabling:** Thin hook-up wire.
 
 ### Tools & Equipment
 * **Soldering Iron**
@@ -36,17 +36,14 @@ You have several options for the 3D printed parts, depending on your printer set
 ### Options
 
 #### Switchplate
-You can choose between two versions of the switchplate:
-* **With Grooves:** Features visual separation grooves between the different key groups. This is ideal for single-color prints.
-* **Without Grooves:** Has a flat surface between the key groups, designed for multi-color printing (e.g., to create colored sections with a multi-material system like an AMS or MMU).
+* **With Grooves:** Features visual separation grooves between the different key groups. Ideal for single-color prints.
+* **Without Grooves:** Has a flat surface between the key groups, designed for multi-color printing.
 
 #### Keycaps
-There are two versions of the keycaps:
-* **Embedded Legends:** The key legends (labels) are modeled into the surface of the keycap. This is for single-color printing and requires precise printer settings.
-* **Smooth/Blank:** The keycaps are flat and blank. This is the choice for multi-color printing of the legends. It can also be used if your printer cannot resolve fine text, in which case you can label them manually (e.g., with adhesive labels).
+* **Embedded Legends:** The key legends (labels) are modeled into the surface of the keycap. For single-color printing.
+* **Smooth/Blank:** Flat and blank. Ideal for multi-color printing of the legends or manual labeling.
 
 ### Printing Requirements
-
 * **Switchplate:** Can be printed with a standard **0.4mm nozzle**.
 * **Keycaps:** To ensure the embedded or multi-color legends are legible, these **must** be printed with a finer **0.2mm nozzle** (hotend).
 
@@ -54,28 +51,33 @@ There are two versions of the keycaps:
 
 ## 4. Wiring & Schematic
 
-After fitting the 42 switches into the switchplate, they must be wired in a matrix configuration.
-
-The following schematic shows how to solder the switches to create a **7 row x 6 column switch matrix**.
+After fitting the 42 switches into the switchplate, they must be wired in a matrix configuration. The following schematic shows how to solder the switches to create a **7 row x 6 column switch matrix**.
 
 ![Wiring Schematic]([IMAGE_PATH_TO_WIRING_DIAGRAM])
 
-This matrix is scanned by the microcontroller (e.g., Arduino Micro). The microcontroller then translates the keypresses and sends the corresponding data to the NanoELS H5 controller via a **PS/2** interface.
+This matrix is scanned by the microcontroller (e.g., Arduino Micro). The microcontroller translates the keypresses and sends the corresponding data to the NanoELS H5 controller via a **PS/2** interface.
+
+### Controller Connection
+
+To connect the keyboard to the NanoELS controller, use the following pinout:
+
+| Arduino Pins | NanoELS PINS | Function |
+| :--- | :--- | :--- |
+| **VCC** | **5V** | Power Supply |
+| **GND** | **GND** | Ground |
+| **2** | **KEYC** | PS/2 Clock |
+| **3** | **KEYD** | PS/2 Data |
 
 ---
 
 ## 5. Planned Improvements (Roadmap)
 
-Future updates to this project include:
-
-* **Handwheels:** The addition of mounting points and support for two incremental rotary encoders (handwheels) on the sides of the switchplate, for precise control of the X and Z axes.
+* **Handwheels:** Addition of mounting points for two incremental rotary encoders (handwheels) on the sides of the switchplate for precise X and Z axis control.
 
 ---
 
 ## 6. Known Bugs & Limitations
 
-Please be aware of the following issues in the current version:
-
-* **Unimplemented Keys (Windows/Mode specific):** The buttons corresponding to `Angle/RPM/Wifi` are currently non-functional.
+* **Unimplemented Keys:** The button corresponding to `Angle/RPM/Wifi` are currently non-functional.
 * **STEP Buttons:** The `STEP +` and `STEP -` buttons currently perform the exact same function.
-* **No Ghosting Protection:** The keyboard matrix does **not** include diodes. As a result, pressing multiple keys simultaneously may lead to incorrect key detections ("ghosting"). **Only one key should be pressed at a time.**
+* **No Ghosting Protection:** The keyboard matrix does **not** include diodes. Pressing multiple keys simultaneously may lead to incorrect key detections ("ghosting"). **Only one key should be pressed at a time.**
