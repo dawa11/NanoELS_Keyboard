@@ -25,7 +25,7 @@ To complete this build, you will need the following components and tools:
 
 ### Tools & Equipment
 * **Soldering Iron**
-* **3D Printer** To print the switchplate and keycaps.
+* **3D Printer**
 
 ---
 
@@ -76,6 +76,6 @@ Future updates to this project include:
 
 Please be aware of the following issues in the current version:
 
-* **Unimplemented Keys (Windows/Mode specific):** The buttons corresponding to "Angle", "RPM", and "Wifi" are currently non-functional.
+* **Unimplemented Keys (Windows/Mode specific):** The buttons corresponding to `Angle/RPM/Wifi` are currently non-functional.
 * **STEP Buttons:** The `STEP +` and `STEP -` buttons currently perform the exact same function.
 * **No Ghosting Protection:** The keyboard matrix does **not** include diodes. As a result, pressing multiple keys simultaneously may lead to incorrect key detections ("ghosting"). **Only one key should be pressed at a time.**
