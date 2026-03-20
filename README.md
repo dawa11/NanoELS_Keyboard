@@ -9,7 +9,7 @@ For more information on the NanoELS H5, please visit the official documentation 
 
 This keyboard combines all the essential keys documented for the H5 onto a simple, robust switchplate using mechanical switches, providing tactile feedback and a dedicated interface for operating your machine.
 
-![Photo of the finished Switchplate]([IMAGE_PATH_TO_FINISHED_PLATE_PHOTO])
+![Photo of the finished Switchplate]([[IMAGE_PATH_TO_FINISHED_PLATE_PHOTO](https://github.com/dawa11/NanoELS_Keyboard/blob/master/Images/Finished%20Switchplate.jpg)])
 
 ---
 
