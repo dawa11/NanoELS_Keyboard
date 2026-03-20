@@ -56,6 +56,7 @@ After fitting the 42 switches into the switchplate, they must be wired in a matr
 Wire the Switches as shown in the Wiring Diagrams.
 First the Rows of the Matrix.
 ![Wiring Diagram Rows](Images/Wiring_Diagram_Rows.jpg)
+
 After that the Colums
 ![Wiring Diagram Rows](Images/Wiring_Diagram_Colums.jpg)
 
