@@ -1,2 +1,81 @@
-# NanoELS_Keyboard
-Custome Keyboard for NanoELS H5
+# Custom Mechanical Keyboard for NanoELS H5
+
+## 1. Project Overview
+
+This project provides the design and instructions to build a custom mechanical keyboard specifically tailored for the **NanoELS H5**. The NanoELS H5 is an advanced Electronic Lead Screw (ELS) system.
+
+For more information on the NanoELS H5, please visit the official documentation and source code:
+[https://github.com/kachurovskiy/nanoels/tree/main/h5](https://github.com/kachurovskiy/nanoels/tree/main/h5)
+
+This keyboard combines all the essential keys documented for the H5 onto a simple, robust switchplate using mechanical switches, providing tactile feedback and a dedicated interface for operating your machine.
+
+![Photo of the finished Switchplate]([IMAGE_PATH_TO_FINISHED_PLATE_PHOTO])
+
+---
+
+## 2. Bill of Materials (BOM) & Requirements
+
+To complete this build, you will need the following components and tools:
+
+### Components
+* **1x Microcontroller** Must have at least **15 GPIO pins** and be **5V tolerant**.
+    * *Recommended* Arduino Micro or a compatible clone.
+* **42x Mechanical Keyboard Switches** Cherry MX style or clones.
+* **Wiring/Cabling** Thin hook-up wire.
+
+### Tools & Equipment
+* **Soldering Iron**
+* **3D Printer** To print the switchplate and keycaps.
+
+---
+
+## 3. 3D Printed Parts & Printing Guidelines
+
+You have several options for the 3D printed parts, depending on your printer setup and aesthetic preferences.
+
+### Options
+
+#### Switchplate
+You can choose between two versions of the switchplate:
+* **With Grooves:** Features visual separation grooves between the different key groups. This is ideal for single-color prints.
+* **Without Grooves:** Has a flat surface between the key groups, designed for multi-color printing (e.g., to create colored sections with a multi-material system like an AMS or MMU).
+
+#### Keycaps
+There are two versions of the keycaps:
+* **Embedded Legends:** The key legends (labels) are modeled into the surface of the keycap. This is for single-color printing and requires precise printer settings.
+* **Smooth/Blank:** The keycaps are flat and blank. This is the choice for multi-color printing of the legends. It can also be used if your printer cannot resolve fine text, in which case you can label them manually (e.g., with adhesive labels).
+
+### Printing Requirements
+
+* **Switchplate:** Can be printed with a standard **0.4mm nozzle**.
+* **Keycaps:** To ensure the embedded or multi-color legends are legible, these **must** be printed with a finer **0.2mm nozzle** (hotend).
+
+---
+
+## 4. Wiring & Schematic
+
+After fitting the 42 switches into the switchplate, they must be wired in a matrix configuration.
+
+The following schematic shows how to solder the switches to create a **7 row x 6 column switch matrix**.
+
+![Wiring Schematic]([IMAGE_PATH_TO_WIRING_DIAGRAM])
+
+This matrix is scanned by the microcontroller (e.g., Arduino Micro). The microcontroller then translates the keypresses and sends the corresponding data to the NanoELS H5 controller via a **PS/2** interface.
+
+---
+
+## 5. Planned Improvements (Roadmap)
+
+Future updates to this project include:
+
+* **Handwheels:** The addition of mounting points and support for two incremental rotary encoders (handwheels) on the sides of the switchplate, for precise control of the X and Z axes.
+
+---
+
+## 6. Known Bugs & Limitations
+
+Please be aware of the following issues in the current version:
+
+* **Unimplemented Keys (Windows/Mode specific):** The buttons corresponding to "Angle", "RPM", and "Wifi" are currently non-functional.
+* **STEP Buttons:** The `STEP +` and `STEP -` buttons currently perform the exact same function.
+* **No Ghosting Protection:** The keyboard matrix does **not** include diodes. As a result, pressing multiple keys simultaneously may lead to incorrect key detections ("ghosting"). **Only one key should be pressed at a time.**
