@@ -53,7 +53,13 @@ You have several options for the 3D printed parts, depending on your printer set
 
 After fitting the 42 switches into the switchplate, they must be wired in a matrix configuration. The following schematic shows how to solder the switches to create a **7 row x 6 column switch matrix**.
 
-![Wiring Schematic]([IMAGE_PATH_TO_WIRING_DIAGRAM])
+Wire the Switches as shown in the Wiring Diagrams.
+First the Rows of the Matrix.
+![Wiring Diagram Rows](Images/Wiring_Diagram_Rows.jpg)
+After that the Colums
+![Wiring Diagram Rows](Images/Wiring_Diagram_Colums.jpg)
+
+Finaly connect the wires to the specified PINs on the Microcontroller
 
 This matrix is scanned by the microcontroller (e.g., Arduino Micro). The microcontroller translates the keypresses and sends the corresponding data to the NanoELS H5 controller via a **PS/2** interface.
 
