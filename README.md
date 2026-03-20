@@ -36,12 +36,12 @@ You have several options for the 3D printed parts, depending on your printer set
 ### Options
 
 #### Switchplate
-* **With Grooves:** Features visual separation grooves between the different key groups. Ideal for single-color prints.
-* **Without Grooves:** Has a flat surface between the key groups, designed for multi-color printing.
+* **Grooves:** Features visual separation grooves between the different key groups. Ideal for single-color prints.
+* **Multi Material:** Has a flat surface modeled as a diferrent material between the key groups, designed for multi-color printing.
 
 #### Keycaps
-* **Embedded Legends:** The key legends (labels) are modeled into the surface of the keycap. For single-color printing.
-* **Smooth/Blank:** Flat and blank. Ideal for multi-color printing of the legends or manual labeling.
+* **Embedded:** The key legends (labels) are modeled into the surface of the keycap. For single-color printing.
+* **Multi Material:** Flat, the key legends are modeled as a diferrent material so they can be printed with two colors. Ideal for multi-color printing of the legends or manual labeling.
 
 ### Printing Requirements
 * **Switchplate:** Can be printed with a standard **0.4mm nozzle**.
